@@ -1,0 +1,84 @@
+page-home {
+
+  .editButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+
+  .add2 {
+    background-color: #f4511e;
+    border: none;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+  }
+
+  .button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+  .addButton {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+
+  .shareButton {
+    background-color: #63A2ED; /* Gray */
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+  }
+
+  .bg-class{
+    background: #87CEFA !important;
+  }
+    h3.no-item{
+        color: black;
+        font-style: italic;
+    }
+
+    p.item {
+      font-style: bold;
+
+      }
+
+    h2.item {
+      text-transform: uppercase;
+      font-family: "Times New Roman", Times, serif;
+      font-style: bold;
+      color: #4682B4;
+      text-decoration: underline;
+    }
+
+}
