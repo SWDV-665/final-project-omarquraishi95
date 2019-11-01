@@ -1,30 +1,30 @@
 import { Injectable } from '@angular/core';
 
 /*
-  Generated class for the GroceriesServiceProvider provider.
+  Generated class for the IBlog provider.
 
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
 @Injectable()
-export class GroceriesServiceProvider {
+export class IBlogServiceProvider {
 
 //Initial list of items for the App on start up
 items=[
   {
     title: "First Blog",
     author: "Omar Quraishi",
-    date: "10/31/2019"
+    post: "This is a my first post"
   },
   {
     title: "Second Blog",
     author: "Omar Quraishi",
-    date: "10/31/2019"
+    post: "This is a my second post"
   }
 ];
 
   constructor() {
-    console.log('Hello GroceriesServiceProvider Provider');
+    console.log('Hello IBlogServiceProvider Provider');
   }
 
   getItems(){

@@ -3,9 +3,10 @@ import { NavController } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 
-import { GroceriesServiceProvider } from '../../providers/groceries-service/groceries-service';
+import { IBlogServiceProvider } from '../../providers/iblog-service/iblog-service';
 import { InputDialogServiceProvider } from '../../providers/input-dialog-service/input-dialog-service';
 import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 @Component({
   selector: 'page-home',
@@ -17,7 +18,7 @@ export class HomePage {
 
 
   //Constructor Method
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController, public dataService: GroceriesServiceProvider, public inputDialogService: InputDialogServiceProvider, public socialSharing: SocialSharing) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController, public dataService: IBlogServiceProvider, public inputDialogService: InputDialogServiceProvider, public socialSharing: SocialSharing) {
 
   }
 
@@ -69,6 +70,7 @@ export class HomePage {
     //Change item by Provider function
    this.inputDialogService.showPromt();
   }
+
 
 
 

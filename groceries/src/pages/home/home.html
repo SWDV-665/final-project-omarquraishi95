@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{title}}</ion-title>
+    <ion-title class="title">{{title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -13,8 +13,9 @@
     <ion-item-sliding *ngFor="let item of loadItems(); let i = index;">
       <ion-item>
         <h2 class="item">{{item.title}}</h2>
-        <p class="item">{{item.author}}</p>
-        <p class="item">{{item.date}}</p>
+        <p class="item">Author: {{item.author}}</p>
+        <br>
+        <p class="item">Your Post: {{item.post}}</p>
       </ion-item>
       <ion-item-options>
         <button (click)="editItem(item, i)" class="editButton" icon-start>
@@ -37,4 +38,12 @@
       <ion-icon  name="add"></ion-icon>
     </button>
   </ion-fab>
+
+  <ion-fab bottom left>
+      <button class="add2 button2"  (click)="openCamera()" ion-fab mini>
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-fab>
+
+
 </ion-content>

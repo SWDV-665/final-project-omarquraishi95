@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController } from 'ionic-angular';
-import { GroceriesServiceProvider } from '../../providers/groceries-service/groceries-service';
+import { IBlogServiceProvider } from '../../providers/iblog-service/iblog-service';
 
 /*
   Generated class for the InputDialogServiceProvider provider.
@@ -11,7 +11,7 @@ import { GroceriesServiceProvider } from '../../providers/groceries-service/groc
 @Injectable()
 export class InputDialogServiceProvider {
 
-  constructor(public alertCtrl: AlertController, public dataService: GroceriesServiceProvider) {
+  constructor(public alertCtrl: AlertController, public dataService: IBlogServiceProvider) {
     console.log('Hello InputDialogServiceProvider Provider');
   }
 
@@ -35,9 +35,9 @@ export class InputDialogServiceProvider {
           value: item ? item.author : null
         },
         {
-          name: 'date',
-          placeholder: 'Enter Date',
-          value: item ? item.date : null
+          name: 'post',
+          placeholder: 'Enter Post',
+          value: item ? item.post : null
         },
       ],
       //Promt Button elements
