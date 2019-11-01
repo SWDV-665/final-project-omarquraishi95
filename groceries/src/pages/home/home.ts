@@ -7,6 +7,8 @@ import { IBlogServiceProvider } from '../../providers/iblog-service/iblog-servic
 import { InputDialogServiceProvider } from '../../providers/input-dialog-service/input-dialog-service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+import { Screenshot } from '@ionic-native/screenshot/ngx';
+
 
 @Component({
   selector: 'page-home',
@@ -16,9 +18,12 @@ export class HomePage {
   //Title for the App
   title= "Welcome to IBlog Inc.";
 
+  screen: any;
+  state: boolean = false;
+
 
   //Constructor Method
-  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController, public dataService: IBlogServiceProvider, public inputDialogService: InputDialogServiceProvider, public socialSharing: SocialSharing) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public alertCtrl: AlertController, public dataService: IBlogServiceProvider, public inputDialogService: InputDialogServiceProvider, public socialSharing: SocialSharing,public screenshot: Screenshot) {
 
   }
 
@@ -37,6 +42,7 @@ export class HomePage {
     //Remove item by Provider function
     this.dataService.removeItem(index);
   }
+
   //Action for Share items functionality - shareItem()
   shareItem(item, index){
     const toast = this.toastCtrl.create({
@@ -54,6 +60,7 @@ export class HomePage {
     });
 
   }
+
   //Action for Edit items functionality - removeItem()
   editItem(item, index){
     const toast = this.toastCtrl.create({
@@ -71,7 +78,29 @@ export class HomePage {
    this.inputDialogService.showPromt();
   }
 
+  // Reset function we will use to hide the screenshot preview after 1 second
+  reset() {
+    var self = this;
+    setTimeout(function(){
+      self.state = false;
+    }, 1000);
+  }
 
+  screenShot() {
+    this.screenshot.save('jpg', 80, 'myscreenshot.jpg').then(res => {
+      this.screen = res.filePath;
+      this.state = true;
+      this.reset();
+    });
+  }
+
+  screenShotURI() {
+   this.screenshot.URI(80).then(res => {
+     this.screen = res.URI;
+     this.state = true;
+     this.reset();
+   });
+ }
 
 
 }

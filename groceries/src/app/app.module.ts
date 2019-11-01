@@ -14,6 +14,9 @@ import { IBlogServiceProvider } from '../providers/iblog-service/iblog-service';
 import { InputDialogServiceProvider } from '../providers/input-dialog-service/input-dialog-service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+import { Screenshot } from '@ionic-native/screenshot/ngx';
+
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,6 +43,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IBlogServiceProvider,
     InputDialogServiceProvider,
+    Screenshot,
     SocialSharing
   ]
 })
