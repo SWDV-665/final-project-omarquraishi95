@@ -14,7 +14,11 @@ import { IBlogServiceProvider } from '../providers/iblog-service/iblog-service';
 import { InputDialogServiceProvider } from '../providers/input-dialog-service/input-dialog-service';
 import { SocialSharing } from '@ionic-native/social-sharing';
 
+import { Instagram } from '@ionic-native/instagram';
 import { Screenshot } from '@ionic-native/screenshot/ngx';
+
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+
 
 
 @NgModule({
@@ -43,6 +47,8 @@ import { Screenshot } from '@ionic-native/screenshot/ngx';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     IBlogServiceProvider,
     InputDialogServiceProvider,
+    Instagram,
+    Camera,
     Screenshot,
     SocialSharing
   ]

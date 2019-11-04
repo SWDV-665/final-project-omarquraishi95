@@ -39,9 +39,14 @@
     </button>
   </ion-fab>
 
+  <button class="add2 button2" ion-button outline (click)="screenShot()">Screenshot (PIC)</button>
+  <button class="add2 button2" ion-button outline (click)="screenShotURI()">Screenshot (URI)</button>
+
+  <img src="{{ screen }}" *ngIf="state">
+
   <ion-fab bottom left>
-      <button class="add2 button2"  (click)="screenShot()" ion-fab mini>
-        <ion-icon name="camera"></ion-icon>
+      <button class="add2 button2"  (click)="shareImage()" ion-fab mini>
+        <ion-icon name="logo-instagram"></ion-icon>
       </button>
     </ion-fab>
 
