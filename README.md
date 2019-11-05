@@ -9,8 +9,12 @@ Use Ionic Serve to run within a normal browser chrome, safari, microsoft edge, o
 Instagram Users:
 If you are using the instagram feature make sure you have instagram installed otherwise the button will not work.  This is essentially fit for mobile devices.
 
+https://ionicacademy.com/ionic-instagram-image-share/
+
 Screenshots:
 
+Helpful Link
+https://coursetro.com/posts/code/81/Creating-Screenshots-with-the-Ionic-Cordova-Screenshot-Plugin
 
 
 Devices: IOS or Andriod 
@@ -26,6 +30,10 @@ https://ionicframework.com/docs/building/running
 
 
 Helpful URL:
+
+Cordova Plugin Make sure you have these installed
+ionic cordova plugin
+
 
 https://ionicframework.com/docs/native/camera
 https://ionicframework.com/docs/native/screenshot
